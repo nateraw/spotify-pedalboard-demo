@@ -1,3 +1,4 @@
 streamlit==0.80.0
 pysoundfile
 pedalboard
+librosa

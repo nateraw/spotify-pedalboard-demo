@@ -124,14 +124,14 @@ def get_transforms():
 
 # 🚨 TODO - messy. clean me pls.
 
-audio_file = open('./download.wav', 'rb')
+audio_file = open('./example.wav', 'rb')
 audio_bytes = audio_file.read()
 
 st.markdown("## Input Audio")
 st.audio(audio_bytes, format='audio/ogg')
 
 # Run the audio through this pedalboard!
-audio, sample_rate = sf.read('./download.wav')
+audio, sample_rate = sf.read('./example.wav')
 board = Pedalboard(get_transforms(), sample_rate=sample_rate)
 effected = board(audio)
 
